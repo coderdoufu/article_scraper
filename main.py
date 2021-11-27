@@ -4,7 +4,6 @@ import os
 import sys
 from retry import retry
 import json
-from scrapydemo.scrapydemo.items import ArticleItem
 
 # scrapy
 from scrapydemo.run_scraper import Scraper
