@@ -32,4 +32,5 @@ nosetests.xml
 coverage.xml
 
 # Data
-
+scrapydemo/scrapydemo/data/reuters.json
+scrapydemo/scrapydemo/data/cna.json
