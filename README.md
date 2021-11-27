@@ -1,5 +1,6 @@
 # News Article Scraper Demo
 This is a demo to show you how to scrape a news article website using Scrapy.
+![Article Scraper Streamlit App](article_scraper.gif)
 
 ## Medium Post
 You can read my latest Medium to understand Scrapy and why it is useful for your next project, this is the link:
