@@ -109,7 +109,7 @@ elif option_site == 'Channel News Asia':
     # selector box for number crawled articles
     option_number_article = option_left.selectbox(
         'How many articles you would like to crawl?',
-        [1,2,3,4,5])
+        [1,2,3])
 
     display_options = display_checkboxes(option_right)
 

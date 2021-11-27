@@ -1,10 +1,4 @@
 import scrapy
-from scrapy.crawler import CrawlerRunner
-from scrapy.utils.project import get_project_settings
-from scrapy.utils.log import configure_logging
-from twisted.internet import reactor
-
-import argparse, sys, os
 from urllib.parse import quote_plus
 import json
 from datetime import datetime as dt
@@ -90,22 +84,3 @@ class CnaSpider(scrapy.Spider):
             if not isinstance(item["body"],list):
                 item["body"] = [item["body"]]
             yield item
-
-# if __name__ == "__main__":
-#     parser=argparse.ArgumentParser()
-
-#     parser.add_argument('--section', type=str, help='section to be crawled')
-#     parser.add_argument('--number_articles', type=int, help='number of articles to be crawled')
-#     args=parser.parse_args()
-
-#     configure_logging({'LOG_FORMAT': '%(levelname)s: %(message)s'})
-#     runner = CrawlerRunner(get_project_settings())
-
-#     d = runner.crawl(CnaSpider, 
-#                      section=args.section,
-#                      number_articles=args.number_articles)
-#     d.addBoth(lambda _: reactor.stop())
-#     reactor.run()
-
-#     # close reactor after finishing crawling
-#     os.execl(sys.executable, *sys.argv)
